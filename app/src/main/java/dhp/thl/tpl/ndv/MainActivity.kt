@@ -872,6 +872,8 @@ class MainActivity : BaseActivity(), StickerAdapter.StickerListener {
                     type = "image/gif"
                     putExtra(Intent.EXTRA_STREAM, contentUri)
                     addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                    putExtra("is_sticker", true)
+                    putExtra("type", 3)
                     setClassName("com.zing.zalo", "com.zing.zalo.ui.TempShareViaActivity")
                 } else {
                     // Resize for Zalo (max width 512px)
