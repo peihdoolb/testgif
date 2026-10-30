@@ -1,0 +1,127 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'org.jetbrains.kotlin.plugin.compose'
+
+android {
+    namespace 'dhp.thl.tpl.ndv'
+    compileSdk 36
+
+    defaultConfig {
+        applicationId 'dhp.thl.tpl.ndv'
+        minSdk 29
+        targetSdk 37
+        versionCode 6600
+        versionName '6.6'
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        
+        // Only include resources for supported languages
+        resConfigs "en", "vi", "ru", "zh"
+        
+    }
+
+    signingConfigs {
+        release {
+            def storePath = System.getenv("SIGNING_STORE_FILE")
+            if (storePath != null) {
+                storeFile file(storePath)
+                storeType "BKS"
+                storePassword System.getenv("SIGNING_STORE_PASSWORD")
+                keyAlias System.getenv("SIGNING_KEY_ALIAS")
+                keyPassword System.getenv("SIGNING_KEY_PASSWORD")
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            if (System.getenv("SIGNING_STORE_FILE") != null) {
+                signingConfig signingConfigs.release
+            }
+        }
+    }
+
+    // In-app language switching relies on our own attachBaseContext logic,
+    // not the OS per-app-language API, so Play must not split language
+    // resources by device locale or a manually selected language's strings
+    // may be missing from the installed split.
+    bundle {
+        language {
+            enableSplit = false
+        }
+    }
+
+    // Required for Play's 16 KB memory page size support check: uncompressed,
+    // page-aligned native libraries so AGP can align .so files to 16 KB.
+    packaging {
+        jniLibs {
+            useLegacyPackaging = false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_25
+        targetCompatibility JavaVersion.VERSION_25
+    }
+
+    kotlinOptions {
+        jvmTarget = "25"
+    }
+
+    buildFeatures {
+        viewBinding true
+        compose true
+    }
+}
+
+dependencies {
+    implementation 'androidx.activity:activity:1.7.2'
+    implementation 'androidx.activity:activity-ktx:1.7.2'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.6.2'
+    implementation 'androidx.core:core-ktx:1.16.0'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.google.android.material:material:1.14.0-alpha01'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.fragment:fragment-ktx:1.6.2'
+
+    // Glide for image loading
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
+    kapt 'com.github.bumptech.glide:compiler:4.16.0'
+
+    // ExifInterface for rotation fix
+    implementation 'androidx.exifinterface:exifinterface:1.3.7'
+
+    // Splash Screen
+    implementation 'androidx.core:core-splashscreen:1.0.1'
+
+    // MonetCompat
+    implementation 'com.github.KieronQuinn:MonetCompat:0.4.1'
+
+
+    // Zip4j for encrypted backups
+    implementation 'net.lingala.zip4j:zip4j:2.11.5'
+
+    // Graphics Shapes for the 9-side cookie shape
+    implementation 'androidx.graphics:graphics-shapes:1.1.0'
+
+    // Compose
+    def composeBom = platform('androidx.compose:compose-bom:2024.12.01')
+    implementation composeBom
+    implementation 'androidx.compose.ui:ui'
+    implementation 'androidx.compose.ui:ui-graphics'
+    implementation 'androidx.compose.ui:ui-tooling-preview'
+    implementation 'androidx.compose.material3:material3:1.4.0-alpha04'
+    implementation 'androidx.activity:activity-compose'
+    implementation 'androidx.lifecycle:lifecycle-runtime-compose'
+    
+    // uCrop
+    implementation 'com.github.yalantis:ucrop:2.2.11'
+
+    // Offline background removal (Google MediaPipe Tasks Vision - Apache 2.0, fully open source)
+    implementation 'com.google.mediapipe:tasks-vision:1.0.0'
+}

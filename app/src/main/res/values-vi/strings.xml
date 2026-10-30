@@ -1,0 +1,94 @@
+<resources>
+    <string name="app_name">ZSticker</string>
+
+    <string name="nav_home">Trang chủ</string>
+    <string name="nav_recents">Gần đây</string>
+    <string name="nav_options">Tùy chọn</string>
+
+    <string name="section_settings">Cài đặt</string>
+    <string name="section_general">Giới thiệu</string>
+
+    <string name="info_theme_title">Giao diện</string>
+    <string name="info_language_title">Ngôn ngữ</string>
+    <string name="info_version_title">Phiên bản</string>
+    <string name="info_repo_title">Mã nguồn</string>
+    <string name="info_repo_note">https://github.com/huanhoahongso3-collab/ZSticker</string>
+    <string name="info_license_title">Giấy phép</string>
+    <string name="info_export_title">Xuất bản sao lưu</string>
+    <string name="export_image">Xuất tất cả hình ảnh</string>
+    <string name="export_history">Xuất tất cả lịch sử</string>
+    <string name="export_settings">Xuất tất cả cài đặt</string>
+    <string name="export_all">Xuất tất cả</string>
+    <string name="info_import_title">Nhập bản sao lưu</string>
+    <string name="import_image">Nhập tất cả hình ảnh</string>
+    <string name="import_history">Nhập tất cả lịch sử</string>
+    <string name="import_settings">Nhập tất cả cài đặt</string>
+    <string name="import_all">Nhập tất cả</string>
+    <string name="export_success">Đã xuất ra Bộ nhớ trong/Pictures/ZSticker/%s</string>
+    <string name="info_remove_recent_title">Xóa tất cả hình dán gần đây</string>
+    <string name="info_remove_recent_confirm_title">Xóa tất cả lịch sử?</string>
+    <string name="info_remove_all_title">Xóa tất cả hình dán</string>
+    <string name="info_remove_all_confirm_title">Xóa tất cả hình dán?</string>
+    <string name="info_remove_all_confirm_message">Hành động này sẽ xóa vĩnh viễn tất cả hình dán của bạn. Không thể hoàn tác.</string>
+    <string name="info_remove_recent_confirm_message">Hành động này sẽ xóa vĩnh viễn tất cả lịch sử hình dán của bạn. Không thể hoàn tác.</string>
+
+    <string name="theme_light">Sáng</string>
+    <string name="theme_dark">Tối</string>
+    <string name="theme_system">Theo hệ thống</string>
+    
+    <string name="info_material_color_title">Màu Material</string>
+    <string name="info_material_color_subtitle">Dùng màu hệ thống</string>
+    
+    <string name="info_license_note">Giấy phép Công cộng GNU v3.0</string>
+    
+    <string name="sticker_options_title">Tùy chọn hình dán</string>
+    <string name="export">Xuất vào bộ sưu tập</string>
+    <string name="delete">Xóa hình dán</string>
+    <string name="view_full_sticker">Xem hình dán đầy đủ</string>
+    <string name="delete_history">Xóa lịch sử</string>
+    <string name="recent_options_title">Tùy chọn gần đây</string>
+    <string name="cancel">Hủy bỏ</string>
+    <string name="zalo_share_failed">Không tìm thấy Zalo hoặc chia sẻ thất bại</string>
+    <string name="success">Thành công</string>
+    <string name="failed">Thất bại</string>
+    <string name="no_stickers_found">Không tìm thấy hình dán</string>
+    <string name="unsupported_file_type">Định dạng tệp không được hỗ trợ</string>
+    <string name="remove_bg">Xóa phông nền</string>
+    <string name="rb_completed">Xóa phông nền hoàn tất</string>
+    <string name="rb_failed">Xóa phông nền thất bại</string>
+    <string name="rb_warning_title">Cảnh báo xóa phông nền</string>
+    <string name="rb_warning_message">Tính năng này sử dụng API của bên thứ ba (BRIA RMBG 1.4). Bằng cách tiếp tục, bạn chấp nhận rằng chúng tôi không có quyền đọc hình ảnh và mọi thứ được sử dụng và kiểm soát bởi Hugging Face và dịch vụ của bên thứ ba.\n\nLiên kết dự án: https://huggingface.co/spaces/briaai/BRIA-RMBG-1.4\nMã nguồn Endpoint: https://github.com/huanhoahongso3-collab/BRIA-RMBG-1.4-PROXY</string>
+    <string name="dont_show_again">Không hiện lại</string>
+    <string name="continue_action">Tiếp tục</string>
+
+    <string name="lang_en">Tiếng Anh</string>
+    <string name="lang_vi">Tiếng Việt</string>
+    <string name="lang_ru">Tiếng Nga</string>
+    <string name="lang_zh">Tiếng Trung</string>
+    <string name="lang_system">Theo hệ thống</string>
+
+    <string name="dynamic_color_warning_title">Lưu ý về màu sắc hệ thống</string>
+    <string name="dynamic_color_warning_message">Việc thay đổi giao diện khác với cài đặt hệ thống có thể làm mất hiệu ứng màu Material You (màu sắc động) trên một số thiết bị.</string>
+    <string name="ok">Đã hiểu</string>
+    <string name="no_internet_access">Không có kết nối internet</string>
+    <string name="no_history_found">Không tìm thấy lịch sử</string>
+    <string name="theme_change_warning_title">Thay đổi giao diện</string>
+    <string name="theme_change_warning_message">Bạn có thể cần khởi động lại ứng dụng để giao diện được áp dụng chính xác.</string>
+    <string name="material_color_unsupported">Phiên bản Android này không hỗ trợ màu Material.</string>
+    <string name="info_opensource_title">Giấy phép mã nguồn mở</string>
+    <string name="info_opensource_note">Các thư viện được sử dụng trong ZSticker</string>
+    <string name="info_files_title">Nhập/Xuất</string>
+    <string name="import_auto_note">Tự động phát hiện nội dung từ ZIP</string>
+    <string name="export_choose_note">Chọn thư mục và nội dung để lưu</string>
+    <string name="export_to_gallery_title">Lưu tất cả hình dán vào Bộ sưu tập</string>
+    <string name="export_to_gallery_note">Xuất tất cả hình dán vào ứng dụng bộ sưu tập của bạn</string>
+    <string name="export_gallery_success">Đã trích xuất %d hình dán vào Bộ sưu tập</string>
+    <string name="not_a_backup_file">Không phải tệp sao lưu</string>
+    <string name="border_sticker">Tạo viền nhãn dán</string>
+    <string name="importing_backup">Đang nhập bản sao lưu&#8230;</string>
+    <string name="exporting_backup">Đang xuất bản sao lưu&#8230;</string>
+    <string name="exporting_to_gallery">Đang lưu vào Thư viện&#8230;</string>
+    <string name="crop">Cắt ảnh</string>
+    <string name="info_online_removebg_title">Xóa nền trực tuyến</string>
+    <string name="info_online_removebg_subtitle">Dùng API bên thứ ba thay vì xử lý trên thiết bị</string>
+</resources>

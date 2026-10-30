@@ -1,0 +1,18 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Wavy/Blobby expressive shape inspired by Material 3 Loading Indicator -->
+    <path
+        android:fillColor="#FF000000"
+        android:pathData="M12,2 
+                  C14,2 16,3 18,5
+                  C20,7 21,9 22,11
+                  C23,13 22,15 20,17
+                  C18,19 16,21 13,22
+                  C10,23 8,22 6,20
+                  C4,18 2,16 2,13
+                  C2,10 3,8 5,6
+                  C7,4 9,2 12,2 Z" />
+</vector>

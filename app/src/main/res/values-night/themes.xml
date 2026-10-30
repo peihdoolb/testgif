@@ -1,0 +1,61 @@
+<resources>
+    <style name="Theme.ZSticker" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Custom Orange Colors for Dark Theme -->
+        <item name="colorPrimary">@color/orange_primary_light</item>
+        <item name="colorPrimaryContainer">@color/dark_orange_container</item>
+        <item name="colorOnPrimaryContainer">@color/dark_orange_on_container</item>
+        <item name="colorSecondary">@color/orange_primary</item>
+        <item name="colorSecondaryContainer">@color/dark_orange_container</item>
+        <item name="colorOnSecondaryContainer">@color/dark_orange_on_container</item>
+        
+        <!-- Surface Colors -->
+        <item name="colorSurface">@color/dark_surface</item>
+        <item name="colorSurfaceContainer">@color/dark_surface_container</item>
+        <item name="colorOnSurface">@color/dark_on_surface</item>
+        <item name="android:colorBackground">@color/dark_background</item>
+        
+        <!-- System Bars -->
+        <item name="android:statusBarColor">?android:attr/colorBackground</item>
+        <item name="android:navigationBarColor">?attr/colorSurfaceContainer</item>
+        <item name="titleTextAppearance">@style/ToolbarBoldTitle</item>
+    </style>
+
+    <style name="ToolbarBoldTitle" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Theme.ZSticker.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher_round</item>
+        <item name="postSplashScreenTheme">@style/Theme.ZSticker</item>
+    </style>
+
+    <style name="ShapeAppearance.ZSticker.MediumComponent" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <style name="InfoItemStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
+
+    <style name="InfoIconStyle">
+        <item name="android:layout_width">36dp</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:padding">6dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:background">@drawable/bg_circle_icon</item>
+        <item name="android:tint">?attr/colorPrimary</item>
+    </style>
+
+    <style name="InfoTextStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+</resources>
+
